@@ -1,0 +1,53 @@
+# See http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+spring:
+  thymeleaf.cache: false
+  main.show-banner: false
+  
+  profiles:
+    active: prod
+    
+  datasource:
+    # 使用druid数据源
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    schema: classpath:import.sql
+    filters: stat
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+
+logging:
+  level:
+    ROOT: WARN
+  file: springbootappdemo.log
+
+#mybatis:
+#  config-location: classpath:mybatis-config.xml
+
+#
+mybatis:
+    type-aliases-package: sample.mybatis.domain
+    mapper-locations: classpath:mybatis/mapper/*.xml
+    
+mapper:
+    mappers: 
+       - sample.mybatis.util.mapper.MyMapper
+    not-empty: false
+    identity: MYSQL
+#
+#分页
+#pagehelper:
+#    helperDialect: mysql
+#    reasonable: true
+#    supportMethodsArguments: true
+#    params: count=countSql
+    

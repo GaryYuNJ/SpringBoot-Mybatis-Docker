@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <zip destfile="E:\MyProject\eclipse_workspace\SpringBootDemo\target/app.zip">
+    <zipfileset dir="E:\MyProject\eclipse_workspace\SpringBootDemo\target/docker"/>
+    <zipfileset includes="SpringBootDemo.jar" dir="E:\MyProject\eclipse_workspace\SpringBootDemo\target"/>
+  </zip>
+</target>
+</project>

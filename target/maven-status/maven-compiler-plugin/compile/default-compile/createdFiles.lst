@@ -1,0 +1,6 @@
+sample\mybatis\domain\City.class
+sample\mybatis\dao\CityDao.class
+spring\boot\test\App.class
+sample\mybatis\domain\Hotel.class
+sample\mybatis\mapper\HotelMapper.class
+sample\mybatis\SampleXmlApplication.class

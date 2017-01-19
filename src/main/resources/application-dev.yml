@@ -1,0 +1,12 @@
+# See http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+spring:
+  datasource:
+        name: devtest
+        url: jdbc:mysql://42.51.4.198:3336/devtest
+        username: root
+        password: root
+  
+logging:
+  level:
+    ROOT: DEBUG
+  file: springbootappdemo.log
